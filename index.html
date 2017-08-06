@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <!-- Include meta tag to ensure proper rendering and touch zooming -->
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <!-- Include jQuery Mobile stylesheets -->
+		  <link rel="stylesheet" href="themes/c.min.css" />
+		  <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		  <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+		  <!-- Include the jQuery library -->
+		  <script src="jquery.mobile-1.4.5/jquery-1.11.1.min.js"></script>
+		  <!-- Include the jQuery Mobile library -->
+		  <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		  <style>
+		  .CGPAtext{
+			color:red;
+			font-size:100px;
+			text-align:center;
+		  }
+		  .CGPAinfo{
+			color:green;
+			align:center;
+			text-align:center;
+		  }
+		  #loginsatus{
+			background-color:#80ff80;
+			width:97%;
+			padding:5px 5px 5px 5px;
+			margin-bottom:10px;
+			font-size:20px;
+		  }
+		  </style>
+	</head>
+	<body >
+			<!--A header can contain one or two buttons, while the footer has no limit.-->
+		<div data-role="page" id="pageone" data-theme="c">
+		  <div data-role="header" data-position="fixed" >
+				<a href="#myPanel" class="ui-btn ui-icon-bars ui-icon ui-btn-icon-notext ui-nodisc-icon">home</a>
+				<h6 style='padding-left:auto; padding-right:auto;'><span style='color:#66FF66'>LSPCCGPAC</span></h6>
+		  </div>
+	
+		  <div data-role="main" class="ui-content v-center" >
+				<div data-role="controlgroup" class='ui-shadow'>
+					<div id="loginsatus">Not Loged in</div>
+					<a href="#loginDialog" class="ui-btn ui-shadow ui-icon-user ui-btn-icon-left" data-transition="fade">Login</a>
+					<a href="#sim1resultpage" class="ui-btn ui-shadow ui-icon-cloud ui-btn-icon-left" data-transition="fade">Semester One</a>
+					<a href="#sim2resultpage" class="ui-btn ui-shadow ui-icon-cloud ui-btn-icon-left" data-transition="fade">Semester Two</a>
+					<a href="#sim3resultpage" class="ui-btn ui-shadow ui-icon-cloud ui-btn-icon-left" data-transition="fade">Semester Three</a>
+					<a href="#sim4resultpage" class="ui-btn ui-shadow ui-icon-cloud ui-btn-icon-left" data-transition="fade">Semester Four</a>
+					<a href="#" class="ui-btn ui-shadow ui-icon-cloud ui-btn-icon-left">Check CGPA</a>
+				</div>
+		  </div>
+
+		  <div data-role="footer" style="text-align:center;" data-position="fixed"> <!--data-type="horizontal"-- to make horizontal menues--->
+				<a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">HELP</a>
+		  </div> 
+		</div>
+		</div>
+		</div>
+		<!--beginning of semester four result page-->
+			<div data-role="page" id="sim4resultpage" data-theme="c">
+				<div data-role="header" data-position="fullscreen" >
+					<a href="#homePage" class="ui-btn ui-icon-arrow-l ui-icon ui-btn-icon-notext ui-nodisc-icon" data-rel="back">back</a>
+					<h6 style='padding-left:auto; padding-right:auto;'><span style='color:#66FF66'>Soft</span> <span style='color:#FF66CC'>Works</h6>			
+				</div>
+			  <div data-role="main" class="ui-content" id='mainContainer'>
+						<!--main content goes here-->
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><label>Course code:</label></div>
+							<div class='ui-block-b'><label>Course unit:</label></div>
+							<div class='ui-block-c'><label>Score:</label></div>
+							<div class='ui-block-d'><label>Grade:</label></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim4cc1" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim4cu1" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim4score1" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim4grade1" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim4cc2" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim4cu2" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim4score2" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim4grade2" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim4cc3" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim4cu3" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim4score3" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim4grade3" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim4cc4" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim4cu4" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim4score4" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim4grade4" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim4cc5" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim4cu5" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim4score5" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim4grade5" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim4cc6" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim4cu6" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim4score6" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim4grade6" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim4cc7" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim4cu7" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim4score7" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim4grade7" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim4cc8" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim4cu8" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim4score8" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim4grade8" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim4cc9" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim4cu9" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim4score9" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim4grade9" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim4cc10" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim4cu10" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim4score10" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim4grade10" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim4cc11" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim4cu11" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim4score11" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim4grade11" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim4cc12" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim4cu12" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim4score12" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim4grade12" value=""></div></div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim4cc13" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim4cu13" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim4score13" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim4grade13" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim4cc14" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim4cu14" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim4score14" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim4grade14" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim4cc15" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim4cu15" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim4score15" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim4grade15" value=""></div>						
+						</div>
+						<a href="#sim4GPAmode" class="ui-btn ui-coner-all" id="calcsim4GpBtn" data-transition="fade">Save & Calculate</a>
+			  <div data-role="footer" style="text-align:center;" data-position="fixed">
+				<!--no footer conitent added -->
+			  </div> 
+			</div>
+			</div>
+		<!--end of semester four result page-->
+		<!--beginning of semester three result page-->
+			<div data-role="page" id="sim3resultpage" data-theme="c">
+				<div data-role="header" data-position="fullscreen" >
+					<a href="#homePage" class="ui-btn ui-icon-arrow-l ui-icon ui-btn-icon-notext ui-nodisc-icon" data-rel="back">back</a>
+					<h6 style='padding-left:auto; padding-right:auto;'><span style='color:#66FF66'>Soft</span> <span style='color:#FF66CC'>Works</h6>			
+				</div>
+			  <div data-role="main" class="ui-content" id='mainContainer'>
+						<!--main content goes here-->
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><label>Course code:</label></div>
+							<div class='ui-block-b'><label>Course unit:</label></div>
+							<div class='ui-block-c'><label>Score:</label></div>
+							<div class='ui-block-d'><label>Grade:</label></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim3cc1" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim3cu1" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim3score1" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim3grade1" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim3cc2" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim3cu2" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim3score2" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim3grade2" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim3cc3" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim3cu3" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim3score3" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim3grade3" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim3cc4" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim3cu4" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim3score4" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim3grade4" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim3cc5" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim3cu5" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim3score5" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim3grade5" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim3cc6" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim3cu6" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim3score6" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim3grade6" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim3cc7" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim3cu7" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim3score7" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim3grade7" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim3cc8" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim3cu8" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim3score8" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim3grade8" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim3cc9" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim3cu9" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim3score9" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim3grade9" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim3cc10" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim3cu10" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim3score10" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim3grade10" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim3cc11" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim3cu11" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim3score11" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim3grade11" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim3cc12" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim3cu12" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim3score12" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim3grade12" value=""></div></div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim3cc13" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim3cu13" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim3score13" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim3grade13" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim3cc14" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim3cu14" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim3score14" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim3grade14" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim3cc15" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim3cu15" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim3score15" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim3grade15" value=""></div>						
+						</div>
+						<a href="#sim3GPAmodel" class="ui-btn ui-coner-all" id="calcsim3GpBtn" data-transition="fade">Save & Calculate</a>
+			  <div data-role="footer" style="text-align:center;" data-position="fixed">
+				<!--no footer conitent added -->
+			  </div> 
+			</div>
+			</div>
+		<!--end of semester three result page-->
+		<!--beginning of semester two result page-->
+			<div data-role="page" id="sim2resultpage" data-theme="c">
+				<div data-role="header" data-position="fullscreen" >
+					<a href="#homePage" class="ui-btn ui-icon-arrow-l ui-icon ui-btn-icon-notext ui-nodisc-icon" data-rel="back">back</a>
+					<h6 style='padding-left:auto; padding-right:auto;'><span style='color:#66FF66'>Soft</span> <span style='color:#FF66CC'>Works</h6>			
+				</div>
+			  <div data-role="main" class="ui-content" id='mainContainer'>
+						<!--main content goes here-->
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><label>Course code:</label></div>
+							<div class='ui-block-b'><label>Course unit:</label></div>
+							<div class='ui-block-c'><label>Score:</label></div>
+							<div class='ui-block-d'><label>Grade:</label></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim2cc1" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim2cu1" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim2score1" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim2grade1" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim2cc2" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim2cu2" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim2score2" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim2grade2" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim2cc3" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim2cu3" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim2score3" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim2grade3" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim2cc4" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim2cu4" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim2score4" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim2grade4" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim2cc5" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim2cu5" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim2score5" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim2grade5" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim2cc6" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim2cu6" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim2score6" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim2grade6" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim2cc7" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim2cu7" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim2score7" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim2grade7" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim2cc8" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim2cu8" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim2score8" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim2grade8" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim2cc9" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim2cu9" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim2score9" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim2grade9" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim2cc10" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim2cu10" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim2score10" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim2grade10" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim2cc11" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim2cu11" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim2score11" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim2grade11" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim2cc12" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim2cu12" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim2score12" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim2grade12" value=""></div></div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim2cc13" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim2cu13" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim2score13" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim2grade13" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim2cc14" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim2cu14" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim2score14" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim2grade14" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim2cc15" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim2cu15" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim2score15" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim2grade15" value=""></div>						
+						</div>
+						<a href="#sim2GPAmodel" class="ui-btn ui-coner-all" id="calcsim2GpBtn" data-transition="fade">Save & Calculate</a>
+			  <div data-role="footer" style="text-align:center;" data-position="fixed">
+				<!--no footer conitent added -->
+			  </div> 
+			</div>
+			</div>
+		<!--end of semester two result page-->
+		<!--beginning of semester one result page-->
+			<div data-role="page" id="sim1resultpage" data-theme="c">
+				<div data-role="header" data-position="fullscreen" >
+					<a href="#homePage" class="ui-btn ui-icon-arrow-l ui-icon ui-btn-icon-notext ui-nodisc-icon" data-rel="back">back</a>
+					<h6 style='padding-left:auto; padding-right:auto;'><span style='color:#66FF66'>Soft</span> <span style='color:#FF66CC'>Works</h6>			
+				</div>
+			  <div data-role="main" class="ui-content" id='mainContainer'>
+						<!--main content goes here-->
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><label>Course code:</label></div>
+							<div class='ui-block-b'><label>Course unit:</label></div>
+							<div class='ui-block-c'><label>Score:</label></div>
+							<div class='ui-block-d'><label>Grade:</label></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim1cc1" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim1cu1" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim1score1" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim1grade1" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim1cc2" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim1cu2" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim1score2" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim1grade2" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim1cc3" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim1cu3" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim1score3" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim1grade3" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim1cc4" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim1cu4" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim1score4" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim1grade4" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim1cc5" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim1cu5" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim1score5" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim1grade5" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim1cc6" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim1cu6" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim1score6" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim1grade6" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim1cc7" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim1cu7" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim1score7" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim1grade7" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim1cc8" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim1cu8" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim1score8" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim1grade8" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim1cc9" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim1cu9" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim1score9" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim1grade9" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim1cc10" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim1cu10" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim1score10" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim1grade10" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim1cc11" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim1cu11" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim1score11" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim1grade11" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim1cc12" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim1cu12" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim1score12" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim1grade12" value=""></div></div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim1cc13" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim1cu13" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim1score13" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim1grade13" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim1cc14" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim1cu14" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim1score14" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim1grade14" value=""></div>
+						</div>
+						<div class='ui-grid-c'>
+							<div class='ui-block-a'><input type="text" id="sim1cc15" value=""></div>
+							<div class='ui-block-b'><input type="text" id="sim1cu15" value=""></div>
+							<div class='ui-block-c'><input type="text" id="sim1score15" value=""></div>
+							<div class='ui-block-d'><input type="text" id="sim1grade15" value=""></div>						
+						</div>
+						<a href="#sim1GPAmodel" class="ui-btn ui-coner-all" id="calcSim1GpBtn" data-transition="fade">Save & Calculate</a>
+			  <div data-role="footer" style="text-align:center;" data-position="fixed">
+				<!--no footer conitent added -->
+			  </div> 
+			</div>
+			</div>
+		<!--end of semester one result page-->
+		
+		<!--beginning of one semester calculation dialog-->
+		<div data-role="page" data-dialog="true" id="sim1GPAmodel" data-overlay-theme="c" data-theme="c">
+			  <div data-role="header" >
+				<h1>Semester One GPA</h1>
+			  </div>
+			  <div data-role="main" class="ui-content">
+				<span class='CGPAinfo'><p>Your One Semester GPA is:</p></span>
+				<span class='CGPAtext'><p id="sim1GPA" >0.00</p></span>
+				<span class='CGPAinfo'><p class='CGPAinfo'> a little text goes in</p></span>
+			  </div>
+
+			  <div data-role="footer">
+			  <!--nothing in the footer yet-->
+			  </div>
+		</div>
+		<div data-role="page" data-dialog="true" id="sim2GPAmodel" data-overlay-theme="c" data-theme="c">
+			  <div data-role="header" >
+				<h1>Semester Two GPA</h1>
+			  </div>
+			  <div data-role="main" class="ui-content">
+				<span class='CGPAinfo'><p>Your One Semester GPA is:</p></span>
+				<span class='CGPAtext'><p id="sim2GPA" >0.00</p></span>
+				<span class='CGPAinfo'><p class='CGPAinfo'> a little text goes in</p></span>
+			  </div>
+
+			  <div data-role="footer">
+			  <!--nothing in the footer yet-->
+			  </div>
+		</div>
+		<div data-role="page" data-dialog="true" id="sim3GPAmodel" data-overlay-theme="c" data-theme="c">
+			  <div data-role="header" >
+				<h1>Semester Two GPA</h1>
+			  </div>
+			  <div data-role="main" class="ui-content">
+				<span class='CGPAinfo'><p>Your One Semester GPA is:</p></span>
+				<span class='CGPAtext'><p id="sim3GPA" >0.00</p></span>
+				<span class='CGPAinfo'><p class='CGPAinfo'> a little text goes in</p></span>
+			  </div>
+
+			  <div data-role="footer">
+			  <!--nothing in the footer yet-->
+			  </div>
+		</div>
+		<div data-role="page" data-dialog="true" id="sim4GPAmodel" data-overlay-theme="c" data-theme="c">
+			  <div data-role="header" >
+				<h1>Semester Two GPA</h1>
+			  </div>
+			  <div data-role="main" class="ui-content">
+				<span class='CGPAinfo'><p>Your One Semester GPA is:</p></span>
+				<span class='CGPAtext'><p id="sim4GPA" >0.00</p></span>
+				<span class='CGPAinfo'><p class='CGPAinfo'> a little text goes in</p></span>
+			  </div>
+
+			  <div data-role="footer">
+			  <!--nothing in the footer yet-->
+			  </div>
+		</div>
+		<!--endof of one semester calculation dialog-->
+		
+		<!--beginning of login in dialog-->
+		<div data-role="page" data-dialog="true"  id="loginDialog" data-overlay-theme="c" data-theme="c">
+			  <div data-role="header" >
+				<h1>Login</h1>
+			  </div>
+			  <div data-role="main" class="ui-content">
+				<label>Enter Your Matric Number</label>
+				<input type="text" id="matricNumber">
+				<a href="#pageone" class="ui-btn ui-coner-all" id="login">Login</a>
+			  </div>
+			  <div data-role="footer">
+			  <!--nothing in the footer yet-->
+			  </div>
+		</div>
+		<!--end of login dialog-->
+		
+	</body>
+
+<!-- Mirrored from www.w3schools.com/jquerymobile/tryit.asp?filename=tryjqmob_lib_jquery by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Jan 2015 07:39:43 GMT -->
+</html>
+<script src="js/index.js"></script>
